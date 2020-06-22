@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+ 	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link href="/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    <link href="/css/globalstyle.css" rel="stylesheet" th:href="@{/css/globalstyle.css}"/>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+		<div class="container-fluid" style="background-color:00ff00;color:#00ff00;height:100%;">
+  			<h3>Evaluacion Final Curso FullStack Trainee </h3>
+		</div>
+	<nav class="navbar navbar-inverse" id="panel1">
+	<div class="container-fluid">
+  				<div class="navbar-header">
+  					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+  				    	<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>                        
+      				</button>
+      				<a class="navbar-brand" href="#">Menu</a>
+      			</div>
+  			</div>
+  		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav">
+		    <li><a href="/index">Inicio</a></li>
+		    <li><a href="/Notas">Notas</a></li>
+		    <li><a href="/Alumno">alumnos</a></li>
+		    <li><a href="/Curso">cursos</a></li>
+		    
+		  </ul>
+	  	</div>
+
+	</nav>
+	<script type="text/javascript" src="/js/bootstrap.js" th:href="@{/js/bootstrap.js}"></script>
+	<script type="text/javascript" src="/js/bootstrap-table.min.js" th:href="@{/js/bootstrap-table.min.js}"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+ 	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="/js/jquery-3.4.1.js" th:href="@{/js/jquery-3.4.1.js}"></script>  	
+	<script src="/js/Notas.js" th:href="@{/js/Notas.js}"></script>
+	<script src="/js/Notas.js"></script>
+
+</head>
+<body>
+		<div class="container-fluid" style="background-color:00ff00;color:#00ff00;height:100%;">
+  			<h3>Evaluacion Final Curso FullStack Trainee </h3>
+		</div>
+	<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+  				<div class="navbar-header">
+  					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+  				    	<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>                        
+      				</button>
+      				<a class="navbar-brand" href="#">Menu</a>
+      			</div>
+  			</div>
+  		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav">
+		    <li><a href="/index">Inicio</a></li>
+		    <li><a href="/Notas">Notas</a></li>
+		    <li><a href="/Alumno">alumnos</a></li>
+		    <li><a href="/Curso">cursos</a></li>
+		    
+		  </ul>
+	  	</div>
+
+	</nav>
+	<form>
+	     			
+				    <div class="form-group">
+				      <label for="id_curso">Ingresar id_curso:</label>
+				      <input type="number" class="form-control" id="id_curso" placeholder="Ingresar id_curso" name="id_curso">
+				    </div>
+				    <div class="form-group">
+				      <label for="rut">RUT(sin dv):</label>
+				      <input type="text" class="form-control" id="rut" placeholder="Ingresar rut" name="rut">
+				    </div>
+				    <div class="form-group">
+				      <label for="numero_modulo">numero de modulo:</label>
+				      <input type="text" class="form-control" id="numero_modulo" placeholder="Ingresar numero_modulo" name="numero_modulo">
+				    </div>
+				     <div class="form-group">
+				      <label for="numero_evaluacion">numero_evaluacion:</label>
+				      <input type="text" class="form-control" id="numero_evaluacion" placeholder="Ingresar numero_evaluacion" name="numero_evaluacion">
+				    </div>
+				     <div class="form-group">
+				      <label for="nota">nota:</label>
+				      <input type="text" class="form-control" id="nota" placeholder="Ingresar nota" name="nota">
+				    </div>
+				    <p>
+				    <div class="alert alert-danger" id="msg" hidden="true">
+					</div>
+					<p>
+				   <div class="btn-group">
+					<button type="button" class="btn btn-primary btn-sml" onclick="javascript:NotasController('list')">List</button>
+					<button type="button" class="btn btn-primary btn-sml" onclick="javascript:NotasController('get')">Buscar </button>
+					<button type="button" class="btn btn-primary btn-sml" onclick="javascript:NotasController('insert')">Nuevo </button>
+					<button type="button" class="btn btn-primary btn-sml" onclick="javascript:NotasController('update')">Actualizar </button>
+					<button type="button" class="btn btn-primary btn-sml" onclick="javascript:NotasController('delete')">Eliminar </button>
+					
+				</div>
+			</form>
+
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+		<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">Close</button>
+					<h4 class="modal-title">notas List</h4>
+				</div>
+				<div class="modal-body">
+					<div class="table-responsive" style='height:100%' id='tableDivContainer'>
+						<table class="table table-condensed" id='notasTable' data-toggle="table" data-height="299">
+							<thead><tr>
+							
+								<th data-field="id_curso">id_curso</th>
+								<th data-field="rut">rut </th>
+								<th data-field="numero_modulo">n. modulo</th>
+								<th data-field="numero_evaluacion">n. evaluacion</th>
+								<th data-field="nota">nota</th>
+
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>	
+					</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="/js/bootstrap.js" th:href="@{/js/bootstrap.js}"></script>
+	<script type="text/javascript" src="/js/bootstrap-table.min.js" th:href="@{/js/bootstrap-table.min.js}"></script>
+</body>
+</html>
